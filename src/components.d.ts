@@ -49,4 +49,67 @@ declare global {
   }
 }
 
+
+import {
+  StopWatchBoxComponent as StopWatchBox
+} from './components/stop-watch-box/stop-watch-box';
+
+declare global {
+  interface HTMLStopWatchBoxElement extends StopWatchBox, HTMLStencilElement {
+  }
+  var HTMLStopWatchBoxElement: {
+    prototype: HTMLStopWatchBoxElement;
+    new (): HTMLStopWatchBoxElement;
+  };
+  interface HTMLElementTagNameMap {
+    "stop-watch-box": HTMLStopWatchBoxElement;
+  }
+  interface ElementTagNameMap {
+    "stop-watch-box": HTMLStopWatchBoxElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "stop-watch-box": JSXElements.StopWatchBoxAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface StopWatchBoxAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  StopWatchComponent as StopWatch
+} from './components/stop-watch/stop-watch';
+
+declare global {
+  interface HTMLStopWatchElement extends StopWatch, HTMLStencilElement {
+  }
+  var HTMLStopWatchElement: {
+    prototype: HTMLStopWatchElement;
+    new (): HTMLStopWatchElement;
+  };
+  interface HTMLElementTagNameMap {
+    "stop-watch": HTMLStopWatchElement;
+  }
+  interface ElementTagNameMap {
+    "stop-watch": HTMLStopWatchElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "stop-watch": JSXElements.StopWatchAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface StopWatchAttributes extends HTMLAttributes {
+      hours?: string;
+      milliseconds?: string;
+      minutes?: string;
+      seconds?: string;
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }

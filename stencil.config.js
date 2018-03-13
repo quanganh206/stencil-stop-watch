@@ -1,5 +1,5 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'stopwatch',
   generateDistribution: true,
   serviceWorker: false
 };
